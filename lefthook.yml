@@ -1,0 +1,7 @@
+pre-push:
+  piped: true
+  commands:
+    1_dart_fix:
+      run: fvm dart fix --apply
+    2_dart_format:
+      run: fvm dart format lib/data lib/domain lib/presentation lib/services lib/utils lib/main.dart
